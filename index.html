@@ -48,6 +48,34 @@
             padding: 20px;
             text-align: center;
         }
+        
+        .login-form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .login-form input[type="submit"]:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -57,16 +85,23 @@
 
     <nav>
         <ul>
-            <li><a href="https://aleksejsgit.github.io">Home</a></li>
-            <li><a href="https://aleksejsgit.github.io/test">About</a></li>
-            <li><a href="https://aleksejsgit.github.io/best">Services</a></li>
-            <li><a href="https://aleksejsgit.github.io/mest">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
     <main>
         <h2>Welcome to My Website</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris efficitur malesuada ligula ac euismod. Nulla facilisi. Sed et lacus ultricies, varius nunc non, fermentum erat. Integer eget arcu et purus mattis cursus. Curabitur sit amet condimentum urna.</p>
+        <div class="login-form">
+            <h3>Login</h3>
+            <form>
+                <input type="text" name="username" placeholder="Username" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
     </main>
 
     <footer>
