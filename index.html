@@ -76,27 +76,60 @@
         .login-form input[type="submit"]:hover {
             background-color: #555;
         }
+        
+        .main-page {
+            display: none;
+        }
+        
+        .main-page.active {
+            display: block;
+        }
+        
+        .main-page textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+        }
+        
+        .main-page input[type="file"] {
+            margin-top: 10px;
+        }
     </style>
     <script>
         // JavaScript code goes here
         function handleFormSubmit(event) {
             event.preventDefault(); // Prevent form submission
             
-            // Get input values
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             
-            // Perform authentication logic
-            // Replace this with your own authentication code
-            
+            // Perform authentication logic (replace with server-side validation)
             if (username === 'admin' && password === 'password') {
-                alert('Login successful!');
-                // Redirect to another page or perform any desired action
+                // Store the logged-in user in localStorage
+                localStorage.setItem('loggedInUser', username);
+                showMainPage();
             } else {
                 alert('Invalid username or password. Please try again.');
-                // Clear the input fields or display an error message
             }
         }
+        
+        function showMainPage() {
+            var loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('main-page').style.display = 'block';
+            }
+        }
+        
+        function logout() {
+            // Clear the stored user from localStorage
+            localStorage.removeItem('loggedInUser');
+            document.getElementById('login-page').style.display = 'block';
+            document.getElementById('main-page').style.display = 'none';
+        }
+        
+        // Check if the user is already logged in
+        showMainPage();
     </script>
 </head>
 <body>
@@ -113,17 +146,28 @@
         </ul>
     </nav>
 
-    <main>
-        <h2>Welcome to My Website</h2>
-        <div class="login-form">
-            <h3>Login</h3>
-            <form onsubmit="handleFormSubmit(event)">
-                <input type="text" id="username" name="username" placeholder="Username" required><br>
-                <input type="password" id="password" name="password" placeholder="Password" required><br>
-                <input type="submit" value="Login">
-            </form>
-        </div>
-    </main>
+    <div id="login-page">
+        <main>
+            <h2>Welcome to My Website</h2>
+            <div class="login-form">
+                <h3>Login</h3>
+                <form onsubmit="handleFormSubmit(event)">
+                    <input type="text" id="username" name="username" placeholder="Username" required><br>
+                    <input type="password" id="password" name="password" placeholder="Password" required><br>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div id="main-page" class="main-page">
+        <main>
+            <h2>Welcome, <span id="username-display"></span>!</h2>
+            <button onclick="logout()">Logout</button>
+            <textarea placeholder="Enter text..."></textarea>
+            <input type="file">
+        </main>
+    </div>
 
     <footer>
         &copy; 2023 My Website. All rights reserved.
