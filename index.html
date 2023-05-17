@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MTotally not a phishing website</title>
+    <title>Not phishing</title>
     <style>
         /* CSS styles go here */
         body {
@@ -77,18 +77,39 @@
             background-color: #555;
         }
     </style>
+    <script>
+        // JavaScript code goes here
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get input values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            // Perform authentication logic
+            // Replace this with your own authentication code
+            
+            if (username === 'admin' && password === 'password') {
+                alert('Login successful!');
+                // Redirect to another page or perform any desired action
+            } else {
+                alert('Invalid username or password. Please try again.');
+                // Clear the input fields or display an error message
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Valsts policija</h1>
+        <h1>Valsts policijas iesniegums</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sākums</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Pakalpojumi</a></li>
+            <li><a href="#">Kontakti</a></li>
         </ul>
     </nav>
 
@@ -96,16 +117,7 @@
         <h2>Welcome to My Website</h2>
         <div class="login-form">
             <h3>Login</h3>
-            <form>
-                <input type="text" name="username" placeholder="Username" required><br>
-                <input type="password" name="password" placeholder="Password" required><br>
-                <input type="submit" value="Login">
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2023 My Website. All rights reserved.
-    </footer>
-</body>
-</html>
+            <form onsubmit="handleFormSubmit(event)">
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                <input type="
