@@ -1,89 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
 body {
-  background-color: #ffffff;
   margin: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  max-width: 412px;
-  margin: 0 auto;
+  padding: 0;
 }
 
 .header {
   background-color: red;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  height: 50px;
 }
 
-.top-part {
-  font-size: 18px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-.arrow {
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
-  transform: rotate(-45deg);
-  margin-right: 5px;
-}
-
-.bottom-part {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.content {
-  flex-grow: 1;
+.middle {
   background-color: orange;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .bottom {
-  background-color: #ffffff;
-  padding: 10px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  height: 50px;
 }
-
-.button {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  color: orange;
-  font-weight: bold;
-  font-size: 24px;
-}
-
-</style>
-</head>
-<body>
-<div class="container">
-  <div class="header">
-    <div class="top-part"><div class="arrow"></div></div>
-    <div class="bottom-part">Try Circle Ks bonusgame</div>
-  </div>
-  <div class="content">
-    <!-- Content Area -->
-  </div>
-  <div class="bottom"></div>
-</div>
-</body>
-</html>
