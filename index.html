@@ -31,32 +31,36 @@
       background-size: cover;
     }
     
-.midtop-x {
-  position: absolute;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
-  opacity: 0.3;
-}
-.midtop-x:hover {
-  opacity: 1;
-}
-.midtop-x:before, .midtop-x:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
-  background-color: #FFFFFF;
-}
-.midtop-x:before {
-  transform: rotate(45deg);
-}
-.midtop-x:after {
-  transform: rotate(-45deg);
-}
-
+    .midtop-x {
+      position: absolute;
+      right: 32px;
+      top: 32px;
+      width: 32px;
+      height: 32px;
+      opacity: 0.3;
+      cursor: pointer;
+    }
+    
+    .midtop-x:hover {
+      opacity: 1;
+    }
+    
+    .midtop-x:before, .midtop-x:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: #333;
+    }
+    
+    .midtop-x:before {
+      transform: rotate(45deg);
+    }
+    
+    .midtop-x:after {
+      transform: rotate(-45deg);
+    }
     
     .midbot {
       background-color: #ed8224;
@@ -73,7 +77,7 @@
   <div class="top"></div>
   <div class="midtop">
     <div class="midtop-image"></div>
-    <div class="midtop-x">&times;</div>
+    <div class="midtop-x"></div>
   </div>
   <div class="midbot"></div>
   <div class="bottom"></div>
