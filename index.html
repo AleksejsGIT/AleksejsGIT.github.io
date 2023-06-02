@@ -24,10 +24,22 @@ body {
 
 .top-part {
   font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+  margin-right: 5px;
 }
 
 .bottom-part {
   font-size: 24px;
+  font-weight: bold;
 }
 
 .content {
@@ -39,9 +51,6 @@ body {
 }
 
 .bottom {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   background-color: #ffffff;
   padding: 10px;
 }
@@ -98,17 +107,13 @@ body {
 <body>
 <div class="container">
   <div class="header">
-    <div class="top-part"><-</div>
+    <div class="top-part"><div class="arrow"></div><-</div>
     <div class="bottom-part">Try CircleKs bonusgame</div>
   </div>
   <div class="content">
     <!-- Content Area -->
   </div>
-  <div class="bottom">
-    <div class="button triangle"></div>
-    <div class="button circle"></div>
-    <div class="button square"></div>
-  </div>
+  <div class="bottom"></div>
 </div>
 </body>
 </html>
