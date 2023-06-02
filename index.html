@@ -1,176 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
-    <style>
-        /* CSS styles go here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-        }
-        
-        nav {
-            background-color: #f4f4f4;
-            padding: 10px;
-        }
-        
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav ul li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            padding: 5px;
-        }
-        
-        main {
-            padding: 20px;
-        }
-        
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .login-form {
-            max-width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        
-        .login-form input[type="text"],
-        .login-form input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-        
-        .login-form input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .login-form input[type="submit"]:hover {
-            background-color: #555;
-        }
-        
-        .main-page {
-            display: none;
-        }
-        
-        .main-page.active {
-            display: block;
-        }
-        
-        .main-page textarea {
-            width: 100%;
-            height: 150px;
-            padding: 10px;
-        }
-        
-        .main-page input[type="file"] {
-            margin-top: 10px;
-        }
-    </style>
-    <script>
-        // JavaScript code goes here
-        function handleFormSubmit(event) {
-            event.preventDefault(); // Prevent form submission
-            
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            
-            // Perform authentication logic (replace with server-side validation)
-            if (username === 'admin' && password === 'password') {
-                // Store the logged-in user in localStorage
-                localStorage.setItem('loggedInUser', username);
-                showMainPage();
-            } else {
-                alert('Invalid username or password. Please try again.');
-            }
-        }
-        
-        function showMainPage() {
-            var loggedInUser = localStorage.getItem('loggedInUser');
-            if (loggedInUser) {
-                document.getElementById('login-page').style.display = 'none';
-                document.getElementById('main-page').style.display = 'block';
-            }
-        }
-        
-        function logout() {
-            // Clear the stored user from localStorage
-            localStorage.removeItem('loggedInUser');
-            document.getElementById('login-page').style.display = 'block';
-            document.getElementById('main-page').style.display = 'none';
-        }
-        
-        // Check if the user is already logged in
-        showMainPage();
-    </script>
+<style>
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: red;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.top-part {
+  font-size: 18px;
+}
+
+.bottom-part {
+  font-size: 24px;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: orange;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid orange;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: orange;
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>My Website</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div id="login-page">
-        <main>
-            <h2>Welcome to My Website</h2>
-            <div class="login-form">
-                <h3>Login</h3>
-                <form onsubmit="handleFormSubmit(event)">
-                    <input type="text" id="username" name="username" placeholder="Username" required><br>
-                    <input type="password" id="password" name="password" placeholder="Password" required><br>
-                    <input type="submit" value="Login">
-                </form>
-            </div>
-        </main>
-    </div>
-
-    <div id="main-page" class="main-page">
-        <main>
-            <h2>Welcome, <span id="username-display"></span>!</h2>
-            <button onclick="logout()">Logout</button>
-            <textarea placeholder="Enter text..."></textarea>
-            <input type="file">
-        </main>
-    </div>
-
-    <footer>
-        &copy; 2023 My Website. All rights reserved.
-    </footer>
+<div class="container">
+  <div class="header">
+    <div class="top-part">Android Phone</div>
+    <div class="bottom-part">Home</div>
+  </div>
+  <div class="content">
+    <div class="button triangle"></div>
+    <div class="button circle"></div>
+    <div class="button square"></div>
+  </div>
+</div>
 </body>
 </html>
