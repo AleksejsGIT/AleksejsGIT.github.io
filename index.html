@@ -35,33 +35,19 @@
       position: absolute;
       right: 32px;
       top: 32px;
-      width: 40px;
-      height: 40px;
-      opacity: 0.3;
+      width: 60px;
+      height: 60px;
+      opacity: 1;
       cursor: pointer;
+      color: white;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .midtop-x:hover {
-      opacity: 1;
-    }
-    
-    .midtop-x:before, .midtop-x:after {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      content: ' ';
-      height: 2px;
-      width: 24px;
-      background-color: white;
-      transform: translate(-50%, -50%);
-    }
-    
-    .midtop-x:before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-    
-    .midtop-x:after {
-      transform: translate(-50%, -50%) rotate(-45deg);
+      opacity: 0.7;
     }
     
     .midbot {
@@ -79,7 +65,7 @@
   <div class="top"></div>
   <div class="midtop">
     <div class="midtop-image"></div>
-    <div class="midtop-x"></div>
+    <div class="midtop-x">&times;</div>
   </div>
   <div class="midbot"></div>
   <div class="bottom"></div>
