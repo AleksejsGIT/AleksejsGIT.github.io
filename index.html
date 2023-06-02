@@ -31,21 +31,22 @@
       background-size: cover;
     }
     
-    .midtop-x {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+   .midtop-x {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.midtop-x:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
     
     .midbot {
       background-color: #ed8224;
