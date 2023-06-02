@@ -35,8 +35,8 @@
       position: absolute;
       right: 32px;
       top: 32px;
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
       opacity: 0.3;
       cursor: pointer;
     }
@@ -47,19 +47,21 @@
     
     .midtop-x:before, .midtop-x:after {
       position: absolute;
-      left: 15px;
+      left: 50%;
+      top: 50%;
       content: ' ';
-      height: 33px;
-      width: 2px;
-      background-color: #333;
+      height: 2px;
+      width: 24px;
+      background-color: white;
+      transform: translate(-50%, -50%);
     }
     
     .midtop-x:before {
-      transform: rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
     }
     
     .midtop-x:after {
-      transform: rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
     
     .midbot {
