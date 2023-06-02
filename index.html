@@ -31,13 +31,16 @@
       background-size: cover;
     }
     
-   .midtop-x {
+.midtop-x {
   position: absolute;
   right: 32px;
   top: 32px;
   width: 32px;
   height: 32px;
   opacity: 0.3;
+}
+.midtop-x:hover {
+  opacity: 1;
 }
 .midtop-x:before, .midtop-x:after {
   position: absolute;
@@ -47,6 +50,13 @@
   width: 2px;
   background-color: #FFFFFF;
 }
+.midtop-x:before {
+  transform: rotate(45deg);
+}
+.midtop-x:after {
+  transform: rotate(-45deg);
+}
+
     
     .midbot {
       background-color: #ed8224;
