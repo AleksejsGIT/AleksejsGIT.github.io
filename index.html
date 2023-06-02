@@ -16,6 +16,19 @@
     .midtop {
       background-color: #ef933c;
       height: 700px;
+      position: relative;
+    }
+    
+    .midtop-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px; /* Adjust width as needed */
+      height: 200px; /* Adjust height as needed */
+      background-image: url("https://cdn.circlek.one/global/gfx/base/logo.png?v=y23.000");
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     
     .midbot {
@@ -31,7 +44,9 @@
 </head>
 <body>
   <div class="top"></div>
-  <div class="midtop"></div>
+  <div class="midtop">
+    <div class="midtop-image"></div>
+  </div>
   <div class="midbot"></div>
   <div class="bottom"></div>
 </body>
