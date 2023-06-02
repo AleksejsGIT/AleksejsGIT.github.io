@@ -22,13 +22,22 @@
     .midtop-image {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 200px; /* Adjust width as needed */
-      height: 200px; /* Adjust height as needed */
+      left: 20px; /* Move image 20px from the left */
+      width: 150px; /* Adjust width as needed */
+      height: 150px; /* Adjust height as needed */
       background-image: url("https://cdn.circlek.one/global/gfx/base/logo.png?v=y23.000");
       background-position: top left;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    
+    .midtop-x {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
     }
     
     .midbot {
@@ -46,6 +55,7 @@
   <div class="top"></div>
   <div class="midtop">
     <div class="midtop-image"></div>
+    <div class="midtop-x">X</div>
   </div>
   <div class="midbot"></div>
   <div class="bottom"></div>
