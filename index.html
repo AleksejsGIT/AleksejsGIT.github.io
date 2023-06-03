@@ -24,51 +24,33 @@
       background: linear-gradient(#ef933c 0%, #ef933c 40%, #ed8224 40%, #ed8224 100%);
       height: 87vh;
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
     }
     
     .mid-image {
+      position: absolute;
+      top: 30px;
+      left: 30px;
       width: 150px;
       height: 150px;
       background-image: url("logo.png");
       background-position: top left;
       background-repeat: no-repeat;
       background-size: cover;
-      margin-bottom: 30px;
     }
     
-    .timer-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-    }
-    
-    .timer-circle {
-      width: 200px;
-      height: 200px;
-      background-color: white;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 20px;
-    }
-    
-    .timer-circle span {
-      font-size: 40px;
-      font-weight: bold;
-      color: black;
-    }
-    
-    .timer-label {
-      font-family: "Andis Bold", sans-serif;
-      font-size: 24px;
-      text-transform: uppercase;
+    .mid-x {
+      position: absolute;
+      right: 60px;
+      top: 30px;
+      border: none;
+      background: none;
+      font-size: 120px;
       color: white;
+    }
+    
+    .bottom {
+      background-color: white;
+      height: 5vh;
     }
   </style>
 </head>
@@ -78,18 +60,10 @@
     Try Circle Ks bonusgame
   </div>
   <div class="mid">
+    <img src="image212.png" alt="Image212" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
     <div class="mid-image"></div>
-    <div class="timer-container">
-      <div class="timer-circle" id="minutes-circle">
-        <span id="minutes">10</span>
-      </div>
-      <div class="timer-circle" id="seconds-circle">
-        <span id="seconds">00</span>
-      </div>
-    </div>
-    <div class="timer-label">Minūtes</div>
-    <div class="timer-label">Sekundes</div>
-    <img src="image212.png" alt="Image 212" style="width: 300px; height: 200px; margin-top: 30px;">
+    <button class="mid-x">&times;</button>
   </div>
+  <div class="bottom"></div>
 </body>
 </html>
