@@ -50,28 +50,6 @@
       background: none;
       font-size: 120px;
       color: white;
-      overflow: hidden;
-    }
-    
-    .mid-x::before,
-    .mid-x::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      background-color: white;
-      border-radius: 10px; /* LAI IZSKATAS SMUKS X */
-    }
-    
-    .mid-x::before {
-      left: 0;
-      transform: rotate(45deg);
-    }
-    
-    .mid-x::after {
-      right: 0;
-      transform: rotate(-45deg);
     }
     
     .bottom {
@@ -87,7 +65,7 @@
   </div>
   <div class="mid">
     <div class="mid-image"></div>
-    <button class="mid-x"></button>
+    <button class="mid-x">&times;</button>
   </div>
   <div class="bottom"></div>
 </body>
