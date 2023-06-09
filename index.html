@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Real</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .top {
+            background-color: #d9291a;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: "Andis Bold", sans-serif;
+            font-size: 17px;
+            padding-left: 0px;
+        }
+        
+        .bottom {
+            background-color: white;
+            height: 5vh;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="top">
+        <img class="back-image" src="Screenshot_1.png" alt="Back" style="
+       
+    ">
+        <span>Try Circle Ks bonusgame</span>
+
+    </div>
+    <div class="mid">
+
+
+        <div class="mid-image"></div>
+        <button class="mid-x">&times;</button>
+        <div class="mid-white-shape-box">
+            <div class="wrap">
+                <div class="top-section">
+                    <div class="wave-box">
+                        <div class="waves">
+                            <div class="wave" id="wave1"></div>
+                            <div class="wave" id="wave2"></div>
+                            <div class="wave" id="wave3"></div>
+                            <div class="wave" id="wave4"></div>
+                            <div class="wave" id="wave5"></div>
+                        </div>
+                    </div>
+                    <img src="img/image212.png" class="bg-at">
+
+                    <div class="product-box">
+                        <img src="img/cup.png" alt="" srcset="">
+                    </div>
+                    <!-- time -->
+                    <div class="time-box">
+                        <div class="date-box">
+                            <h3 id="ct-time">14:45</h3>
+                            <h4 id="ct-date"></h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom-footer-text">
+            <div class="footer-heading">
+                <h3>ATLIKUŠAIS LAIKS</h3>
+            </div>
+            <div class="time-minute-box">
+                <div class="min-box">
+                    <span class="min" id="countdown"></span >
+                        <label for="">Minūtes</label>
+                </div>
+                <div class="min-box">
+                    <span class="sec" id="sec"> </span>
+                    <label for="">Sekundes</label>
+                </div>
+            </div>
+        </div>
+        <div class="white-bg-shape">
+
+        </div>
+</body>
+<script>
+    let date = new Date();
+    console.log(date.toDateString());
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    if (day < 10) {
+        day = '0' + day;
+    }
+
+    if (month < 10) {
+        month = `0${month}`;
+    }
+
+    // This arrangement can be altered based on how we want the date's format to appear.
+    let currentDate = `${day}:${month}:${year}`;
+
+    document.getElementById("ct-date").innerHTML = currentDate;
+    //time
+    let time = date.getHours() + ":" + date.getMinutes();
+    document.getElementById("ct-time").innerHTML = time;
+    console.log(time);
+    //sale count down
+    let timeInSecs;
+    let ticker;
+
+    function startTimer(secs) {
+        timeInSecs = parseInt(secs);
+        ticker = setInterval("tick()", 1000);
+    }
+
+    function tick() {
+        let secs = timeInSecs;
+        if (secs > 0) {
+            timeInSecs--;
+        } else {
+            clearInterval(ticker);
+            startTimer(5 * 60); // 4 minutes in seconds
+        }
+
+        let mins = Math.floor(secs / 60);
+        secs %= 60;
+        let pretty = ((mins < 10) ? "0" : "") + mins;
+        let second = ((secs < 10) ? "0" : "") + secs;
+
+        document.getElementById("countdown").innerHTML = pretty;
+        document.getElementById("sec").innerHTML = second;
+    }
+
+    startTimer(10 * 60); // 4 minutes in seconds
+
+    //Credits to Gulzaib from Pakistan
+</script>
+
+</html>
