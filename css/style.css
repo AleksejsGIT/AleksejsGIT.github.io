@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.min-box {
+    margin: 0px 4px;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-size: 1000px 100px;
+}
+
+.time-minute-box>.min-box>span {
+    font-weight: 800;
+}
+
+.date-box>h3 {
+    font-weight: 400;
+}
+
+.date-box>h4 {
+    font-weight: 400;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-family: 'Tinos', serif;
+}
+
+.wave#wave1 {
+    top: 0px;
+    z-index: 1000;
+    opacity: 1;
+    bottom: 10;
+    background: url('../img/red-ribbon.png');
+    animation: animateWave 18s linear infinite;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 1;
+    bottom: 10;
+    background: url('../img/red-ribbon.png');
+    animation: animateWave_02 18s linear infinite;
+}
+
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 15;
+    background: url('../img/yellow-ribbon.png');
+    animation: animateWave 12s linear infinite;
+}
+
+.wave#wave4 {
+    background: url('../img/yellow-ribbon.png');
+    z-index: 999;
+    opacity: 1;
+    bottom: 20;
+    animation: animateWave_02 12s linear infinite;
+}
+
+.wave#wave5 {
+    top: -50px;
+    z-index: 1000;
+    opacity: 1;
+    bottom: 10;
+    background: url('../img/red-ribbon.png');
+    animation: animateWave 18s linear infinite;
+}
+
+.time-minute-box>.min-box>span {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    display: block;
+    line-height: 50px;
+    margin: 0;
+    text-align: center;
+    border-radius: 100px;
+    margin-bottom: 4px;
+}
+
+button.mid-x {
+    border: none;
+    background: none;
+    font-size: 42px;
+    color: white;
+}
+
+.time-minute-box {
+    display: flex;
+    justify-content: center;
+}
+
+.wave-box {
+    position: relative;
+    height: 266px;
+    top: 20px;
+    overflow: hidden;
+}
+
+.waves {
+    margin-top: 40px;
+}
+
+img.bg-at {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 800px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 800px;
+    }
+}
+
+
+/* white-shape-box */
+
+.mid-image {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/logo.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-dots,
+.bottom-dots {
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.bottom-dots {
+    top: 100%;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 2;
+}
+
+span.section-middle.dots {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 99999999;
+}
+
+.mid-white-shape-box {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 84%;
+    height: 70%;
+    /* background-image: url(../img/image212.png); */
+}
+
+.mid-x {
+    border: none;
+    background: none;
+    font-size: 54px;
+    color: white;
+}
+
+.product-box>img {
+    width: 170px;
+}
+
+body {
+    background: linear-gradient(#ed8224 0%, #ef933c 40%, #ed8224 40%, #ed8224 100%);
+    height: 100vh;
+}
+
+h3#ct-time {
+    font-size: 15px;
+    font-family: 'Tinos', serif;
+}
+
+.product-box {
+    position: absolute;
+    top: -36px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.time-box {
+    position: relative;
+    text-align: center;
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 20px 10px;
+    top: -50px;
+    width: 80%;
+    margin: 0px auto;
+    color: #7c7c7c;
+}
+
+.top>span {
+    width: 240px;
+}
+
+.mid {
+    background: linear-gradient(#ef933c 0%, #ef933c 40%, #ed8224 40%, #ed8224 100%);
+    height: 100vh;
+    position: relative;
+}
+
+.footer-heading {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.bottom-footer-text {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.min-box>label {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-heading {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 580px) and (min-width: 491px) {
+    .product-box>img {
+        width: 230px;
+    }
+    .time-box {
+        position: relative;
+        padding: 20px 10px;
+        top: 100px;
+    }
+    .bottom-footer-text {
+        position: absolute;
+        bottom: 130px;
+    }
+}
+
+@media only screen and (max-width: 490px) and (min-width: 421px) {
+    button.mid-x {
+        position: absolute;
+        top: 18px;
+        right: 30px;
+    }
+    .time-box {
+        padding: 20px 10px;
+        top: 35px;
+        width: 80%;
+        margin: 0px auto;
+        color: #808080;
+    }
+    img.back-image {
+        width: 60px;
+        height: 60px;
+    }
+    .bottom-footer-text {
+        position: absolute;
+        bottom: -50px;
+    }
+    .product-box>img {
+        width: 180px;
+    }
+    .mid-white-shape-box {
+        top: 50%;
+    }
+}
+
+@media only screen and (max-width: 420px) and (min-width: 351px) {
+    .time-box {
+        top: 30px;
+    }
+    button.mid-x {
+        position: absolute;
+        top: 18px;
+        right: 30px;
+    }
+    .top>span {
+        width: 70%;
+    }
+    img.back-image {
+        width: 60px;
+        height: 60px;
+    }
+    img.bg-at {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .top>span {
+        width: 64%;
+    }
+    .product-box {
+        position: absolute;
+        top: -8px;
+    }
+    .bottom-footer-text {
+        bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) and (min-width: 300px) {
+    button.mid-x {
+        position: absolute;
+        top: 18px;
+        right: 30px;
+    }
+    .back-image {
+        margin-right: 0px;
+    }
+    .top>span {
+        width: 70%;
+    }
+    .wave {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-size: 1000px 100px;
+    }
+    img.back-image {
+        width: 60px;
+        height: 60px;
+    }
+    .wave#wave1 {
+        top: 0px;
+        z-index: 1000;
+        opacity: 1;
+        bottom: 10;
+        background: url('../img/red-ribbon.png');
+        animation: animateWave 18s linear infinite;
+    }
+    .wave#wave2 {
+        z-index: 999;
+        opacity: 1;
+        bottom: 10;
+        background: url('../img/red-ribbon.png');
+        animation: animateWave_02 18s linear infinite;
+    }
+    .wave#wave3 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 15;
+        background: url('../img/yellow-ribbon.png');
+        animation: animateWave 12s linear infinite;
+    }
+    .wave#wave4 {
+        background: url('../img/yellow-ribbon.png');
+        z-index: 999;
+        opacity: 1;
+        bottom: 20;
+        animation: animateWave_02 12s linear infinite;
+    }
+    .wave#wave5 {
+        top: -50px;
+        z-index: 1000;
+        opacity: 1;
+        bottom: 10;
+        background: url('../img/red-ribbon.png');
+        animation: animateWave 18s linear infinite;
+    }
+    .wave-box {
+        position: relative;
+        height: 266px;
+    }
+    .waves {
+        margin-top: 20px;
+    }
+    img.bg-at {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: auto;
+    }
+    @keyframes animateWave {
+        0% {
+            background-position-x: 800px;
+        }
+        100% {
+            background-position-x: 0px;
+        }
+    }
+    @keyframes animateWave_02 {
+        0% {
+            background-position-x: 0px;
+        }
+        100% {
+            background-position-x: 800px;
+        }
+    }
+    /* white-shape-box */
+    /* .top-section {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 150px;
+	  
+	} */
+    .top-dots,
+    .bottom-dots {
+        position: absolute;
+        width: 100%;
+        display: block;
+        top: 0;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    .bottom-dots {
+        top: 100%;
+    }
+    .section {
+        position: relative;
+        width: 100%;
+        display: block;
+        z-index: 2;
+    }
+    span.section-middle.dots {
+        position: relative;
+        width: 100%;
+        display: block;
+        z-index: 99999999;
+    }
+    .mid-white-shape-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 84%;
+        height: 70%;
+        /* background-image: url(../img/image212.png); */
+    }
+    .mid-x {
+        border: none;
+        background: none;
+        font-size: 54px;
+        color: white;
+    }
+    .product-box>img {
+        width: 150px;
+    }
+    .product-box {
+        position: absolute;
+        top: -16px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+    }
+    .time-box {
+        position: relative;
+        text-align: center;
+        background: #ccc;
+        border-radius: 10px;
+        padding: 20px 10px;
+        top: -50px;
+        width: 80%;
+        margin: 0px auto;
+        color: #808080;
+    }
+}
