@@ -42,7 +42,7 @@ body {
     opacity: 1;
     bottom: 10;
     background: url('../img/red-ribbon.png');
-    animation: animateWave 18s linear infinite;
+    animation: animateWave 12s linear infinite;
 }
 
 .wave#wave2 {
@@ -50,7 +50,7 @@ body {
     opacity: 1;
     bottom: 10;
     background: url('../img/red-ribbon.png');
-    animation: animateWave_02 18s linear infinite;
+    animation: animateWave_02 12s linear infinite;
 }
 
 .wave#wave3 {
@@ -58,7 +58,7 @@ body {
     opacity: 1;
     bottom: 15;
     background: url('../img/yellow-ribbon.png');
-    animation: animateWave 12s linear infinite;
+    animation: animateWave 6s linear infinite;
 }
 
 .wave#wave4 {
@@ -66,7 +66,7 @@ body {
     z-index: 999;
     opacity: 1;
     bottom: 20;
-    animation: animateWave_02 12s linear infinite;
+    animation: animateWave_02 6s linear infinite;
 }
 
 .wave#wave5 {
@@ -75,7 +75,7 @@ body {
     opacity: 1;
     bottom: 10;
     background: url('../img/red-ribbon.png');
-    animation: animateWave 18s linear infinite;
+    animation: animateWave 12s linear infinite;
 }
 
 .time-minute-box>.min-box>span {
