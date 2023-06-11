@@ -200,6 +200,7 @@ span.section-middle.dots {
 
 .product-box>img {
     width: 170px;
+    margin-top: 30px;
 }
 
 body {
@@ -226,7 +227,7 @@ h3#ct-time {
     text-align: center;
     background: #e6e6e6;
     border-radius: 10px;
-    padding: 20px 10px;
+    padding: 20px 0px;
     top: -50px;
     width: 80%;
     margin: 0px auto;
@@ -234,7 +235,7 @@ h3#ct-time {
 }
 
 .top>span {
-    width: 240px;
+    width: 20px;
 }
 
 .mid {
