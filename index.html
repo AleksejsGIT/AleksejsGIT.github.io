@@ -28,31 +28,17 @@
 			height: 5vh;
 		}
 
-		.dropdown {
-			position: relative;
-			display: inline-block;
-		}
-
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			background-color: #f1f1f1;
-			min-width: 160px;
-			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-			padding: 12px 16px;
-			z-index: 1;
-		}
-
 		.dropdown-click .dropdown-content {
 			display: none;
 		}
 
 		.dropdown-click.clicked .dropdown-content {
 			display: block;
+			position: absolute;
 		}
 
 		.image-option {
-			width: 50px;
+			width: 64px;
 			cursor: pointer;
 		}
 	</style>
@@ -60,18 +46,14 @@
 </head>
 
 <body>
-	<div class="top">
-		<img class="back-image" src="Screenshot_1.png" alt="Back" style="
-       
-    ">
+	<div class="top dropdown dropdown-click" onclick="toggleDropdown(this)">
+		<img class="back-image" src="Screenshot_1.png" alt="Back" style="">
 		<span>Try Circle Ks bonusgame</span>
 
-		<div class="dropdown dropdown-click" onclick="toggleDropdown(this)">
-			<div class="dropdown-content">
-				<img src="image1.jpg" alt="Image 1" class="image-option" onclick="changeImage('image1.jpg')" />
-				<img src="image2.jpg" alt="Image 2" class="image-option" onclick="changeImage('image2.jpg')" />
-				<img src="image3.jpg" alt="Image 3" class="image-option" onclick="changeImage('image3.jpg')" />
-			</div>
+		<div class="dropdown-content">
+			<img src="img/cup.png" alt="cup" id="cup" class="image-option" onclick="changeImage(this.id)"/>
+			<img src="img/hotdogs.png" alt="hotdogs" id="hotdogs" class="image-option" onclick="changeImage(this.id)"/>
+			<img src="img/cola.png" alt="cola" id="cola" class="image-option" onclick="changeImage(this.id)"/>
 		</div>
 	</div>
 	<div class="mid">
@@ -91,10 +73,10 @@
 							<div class="wave" id="wave5"></div>
 						</div>
 					</div>
-					<img src="img/image212.png" class="bg-at">
+					<img src="img/cup_bg.png" class="bg-at" id="product-bg">
 
 					<div class="product-box">
-						<img src="img/cup.png" alt="" srcset="">
+						<img src="img/cup.png" alt="" srcset="" id="product">
 					</div>
 					<!-- time -->
 					<div class="time-box">
@@ -182,8 +164,25 @@
 
     //Credits to Gulzaib from Pakistan
 
-	function changeImage(src) {
-		document.getElementById('selectedImage').src = src;
+	// bilzu maina
+	function changeImage(id) {
+		var imgElement = document.getElementById("product");
+		var bgElement = document.getElementById("product-bg");
+
+		switch (id) {
+			case 'cup':
+				imgElement.src = "img/cup.png";
+				bgElement.src = "img/cup_bg.png";
+				break;
+			case 'hotdogs':
+				imgElement.src = "img/hotdogs.png";
+				bgElement.src = "img/hotdogs_bg.png";
+				break;
+			case 'cola':
+				imgElement.src = "img/cola.png";
+				bgElement.src = "img/cola_bg.png";
+				break;
+		}
 	}
 
 	function toggleDropdown(element) {
