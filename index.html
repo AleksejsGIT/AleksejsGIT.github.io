@@ -54,6 +54,7 @@
 			<img src="img/cup.png" alt="cup" id="cup" class="image-option" onclick="changeImage(this.id)"/>
 			<img src="img/hotdogs.png" alt="hotdogs" id="hotdogs" class="image-option" onclick="changeImage(this.id)"/>
 			<img src="img/cola.png" alt="cola" id="cola" class="image-option" onclick="changeImage(this.id)"/>
+            <img src="img/ledus.png" alt="ledus" id="ledus" class="image-option" onclick="changeImage(this.id)"/>
 		</div>
 	</div>
 	<div class="mid">
@@ -188,7 +189,16 @@
 				imgElement.style.top = "30px"; // pieliec šeit pareizo attēla augstumu
 				bgElement.src = "img/cola_bg.png";
 				break;
-		}
+            case 'ledus':
+				imgElement.src = "img/ledus.png";
+				imgElement.style.position = "relative";
+				imgElement.style.top = "30px"; // pieliec šeit pareizo attēla augstumu
+                imgElement.style.left = "-25px";
+                imgElement.style.width = "45%";
+				bgElement.src = "img/ledus_bg.png";
+                
+				break;
+		} //<img src="img/ledus.png" alt="" style="margin-left: -50px; width: 45%; margin-top: 30px">
 	}
 
 	function toggleDropdown(element) {
