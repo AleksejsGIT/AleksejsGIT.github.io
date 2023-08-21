@@ -58,6 +58,7 @@
 			<img src="img/freeze.png" alt="freeze" id="freeze" class="image-option" onclick="changeImage(this.id)"/>
 			<img src="img/kvass.png" alt="kvass" id="kvass" class="image-option" onclick="changeImage(this.id)"/>
 			<img src="img/bull.png" alt="bull" id="bull" class="image-option" onclick="changeImage(this.id)"/>
+            <img src="img/degv.png" alt="degv" id="degv" class="image-option" onclick="changeImage(this.id)"/>
 		</div>
 	</div>
 	<div class="mid">
@@ -225,6 +226,15 @@
                 imgElement.style.left = "0px";
                 imgElement.style.width = "50%";
 				bgElement.src = "img/bull_bg.png";
+                
+			break;
+                case 'degv':
+				imgElement.src = "img/degv.png";
+				imgElement.style.position = "relative";
+				imgElement.style.top = "5px"; // pieliec šeit pareizo attēla augstumu
+                imgElement.style.left = "0px";
+                imgElement.style.width = "50%";
+				bgElement.src = "img/degv_bg.png";
                 
 				break;
 		} //<img src="img/ledus.png" alt="" style="margin-left: -50px; width: 45%; margin-top: 30px">
