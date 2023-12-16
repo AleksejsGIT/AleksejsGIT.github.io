@@ -37,43 +37,35 @@ function startTimer(duration, display) {
     document.getElementById('date').textContent = currentDate;
   }
   
-  window.onload = function () {
-    var fiveMinutes = 60 * 10,
-        display = document.querySelector('#timer');
-    startTimer(fiveMinutes, display);
-    displayInfo();
-  };
+  // This should be at the end of your script.js file
+document.addEventListener('DOMContentLoaded', (event) => {
+  var fiveMinutes = 60 * 10,
+      display = document.querySelector('#timer');
+  startTimer(fiveMinutes, display);
+  displayInfo();
 
-  // Get the modal element
-var modal = document.getElementById("modal");
+  var modal = document.getElementById("modal");
+  var btn = document.getElementById("triggerModal");
+  var closeModal = document.getElementById('closeModal');
 
-// Get the button or image that opens the modal
-var btn = document.getElementById("triggerModal");
+  // Assuming you want to blur the .squareTop and .squareBot
+  var blurElements = document.querySelectorAll('.squareTop, .squareBot');
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-  // Apply the blur effect to the background or container
-  document.querySelector('.content').style.filter = "blur(5px)";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-  // Remove the blur effect
-  document.querySelector('.content').style.filter = "";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    // Remove the blur effect
-    document.querySelector('.content').style.filter = "";
+  btn.onclick = function() {
+    modal.style.display = "block";
+    blurElements.forEach(el => el.style.filter = "blur(5px)");
   }
-}
 
-  
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+    blurElements.forEach(el => el.style.filter = "none");
+  }
+
+  // Clicking outside the modal closes it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      blurElements.forEach(el => el.style.filter = "none");
+    }
+  }
+});

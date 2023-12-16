@@ -94,21 +94,60 @@ z-index: 5;
 
 /* Modal Content Box */
 .modal-content {
+  position: relative;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  border-radius: 0; /* Adjust if you want rounded corners */
+  width: 75%; /* Could be more or less, depending on screen size */
+  height: 70%;
+  border-radius: 15px; /* Adjust if you want rounded corners */
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-square {
+  background-color: rgb(220, 212, 212); /* Set the square color */
+  width: 100%; /* Full width of the modal content */
+  height: 40%; /* Adjust the height as needed */
+  border-radius: 15px;
 }
+
+.modal-image {
+  display: block; /* Allows margin auto to be applied */
+  max-width: 40%; /* Ensures the image doesn't exceed the container's width */
+  max-height: 40%; /* Ensures the image doesn't exceed the container's height */
+  height: auto; /* Maintains the aspect ratio */
+  width: auto; /* Maintains the aspect ratio */
+  margin: bot; /* Centers the image horizontally */
+  position: absolute; /* Takes the image out of the document flow */
+  top: 75%; /* Positions the top edge of the image in the middle of the container */
+  left: 50%; /* Positions the left edge of the image in the middle of the container */
+  transform: translate(-50%, -50%); /* Offsets the image by half its width and height to truly center it */
+  z-index: 5;
+  
+}
+
+.red-square {
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  display: block;
+  width: 80%; /* Adjust as needed */
+  padding: 10px 20px; /* Padding for the button */
+  margin: 20px auto; /* Center the button */
+  background-color: #b93c34; /* Button color */
+  color: white; /* Text color */
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.centered-text {
+  text-align: center; /* Centers text horizontally */
+  width:  100%; /* Ensures the paragraph takes up the full width of its container */
+  margin: 5; /* Removes any default margin */
+  /* Add more styling as needed */
+}
+
 
 .close:hover,
 .close:focus {
