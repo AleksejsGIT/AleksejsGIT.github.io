@@ -180,6 +180,10 @@ z-index: 5;
   z-index: 1; 
 }
 
+.color-wave-box {
+  height: 30%;
+}
+
 .waves .wave {
   position: absolute;
   left: 0;
@@ -229,6 +233,14 @@ z-index: 5;
   bottom: 10;
   background: url('../img/blacktest.png');
   animation: animateWave 36s linear infinite;
+}
+
+.wave.color-wave#wave1 {
+  background: url('../img/red-ribbon.png');
+}
+
+.wave.color-wave#wave2 {
+  background: url('../img/yellow-ribbon.png');
 }
 
 @keyframes animateWave {
