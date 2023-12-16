@@ -105,11 +105,24 @@ z-index: 5;
 }
 
 .modal-square {
-  background-color: rgb(220, 212, 212); /* Set the square color */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  background-color: rgb(220, 212, 212); 
   width: 100%; /* Full width of the modal content */
   height: 40%; /* Adjust the height as needed */
   border-radius: 15px;
+  
 }
+
+.modal-square .info {
+  font-size: 18px; /* Or any other size you prefer */
+  font-family: 'Gotham Bold';
+  font-weight: 1000;
+  font-style: normal;
+}
+
 
 .modal-image {
   display: block; /* Allows margin auto to be applied */

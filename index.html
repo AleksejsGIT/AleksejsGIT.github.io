@@ -6,7 +6,7 @@
 <title>Countdown Timer</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="startTimer()">
+<body>
 <div class="timer" id="timer">
   10:00
 </div>
@@ -24,14 +24,19 @@
 
 <div id="modal" class="modal">
   <div class="modal-content">
-    <div class="modal-square"></div>
+    <div class="modal-square">
+      <div id="modalWord" class="info">Izmantots:</div>
+      <div id="modalTime" class="info"></div>
+      <div id="modalDate" class="info"></div> <br>
+      <div id="modalWord" class="info">Pašreizējais laiks:</div>
+      <div id="modalCurrTime" class="info"></div> 
+    </div>
     <img src="img/hotdogs.png" alt="Descriptive Text" class="modal-image">
     <button id="closeModal" class="red-square">OK</button>
     <p class="centered-text">Jebkurš hotdogs par brīvu</p>
-
   </div>
 </div>
-  
+
 <div class="wave-box">
   <div class="waves">
     <div class="wave" id="wave1"></div>
