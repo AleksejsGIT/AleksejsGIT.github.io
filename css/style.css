@@ -243,6 +243,11 @@ z-index: 5;
   background: url('../img/yellow-ribbon.png');
 }
 
+/* if wavebox inside model */
+.modal .wave-box {
+  position: relative;
+}
+
 @keyframes animateWave {
     0% {
       background-position-x: 800px;
