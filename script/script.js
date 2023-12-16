@@ -43,4 +43,37 @@ function startTimer(duration, display) {
     startTimer(fiveMinutes, display);
     displayInfo();
   };
+
+  // Get the modal element
+var modal = document.getElementById("modal");
+
+// Get the button or image that opens the modal
+var btn = document.getElementById("triggerModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+  // Apply the blur effect to the background or container
+  document.querySelector('.content').style.filter = "blur(5px)";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  // Remove the blur effect
+  document.querySelector('.content').style.filter = "";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    // Remove the blur effect
+    document.querySelector('.content').style.filter = "";
+  }
+}
+
   

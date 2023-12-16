@@ -57,7 +57,7 @@ height: auto; /* Maintains the aspect ratio */
 width: auto; /* Maintains the aspect ratio */
 margin: bot; /* Centers the image horizontally */
 position: absolute; /* Takes the image out of the document flow */
-top: 62%; /* Positions the top edge of the image in the middle of the container */
+top: 57%; /* Positions the top edge of the image in the middle of the container */
 left: 47%; /* Positions the left edge of the image in the middle of the container */
 transform: translate(-50%, -50%); /* Offsets the image by half its width and height to truly center it */
 z-index: 5;
@@ -73,11 +73,48 @@ z-index: 5;
 
 .textInsideShadow {
   position: absolute;
-  bottom: -28%;
+  bottom: -33%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   color: #dbcbcb;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* Semi-transparent black background */
+  backdrop-filter: blur(5px); /* Blurs the content behind the modal */
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 0; /* Adjust if you want rounded corners */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .wave-box {
