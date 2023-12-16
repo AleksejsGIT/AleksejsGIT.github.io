@@ -1,17 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 body, html {
   height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Gotham Bold', sans-serif; 
+  font-family: 'Raleway', sans-serif;
   background-color: #bc5244;
 }
 
 .timer {
   font-size: 48px;
   color: #ffffff;
-  font-family: 'Gotham Bold';
   font-weight: 1000;
   font-style: normal;
   position: relative;
@@ -66,7 +68,6 @@ z-index: 500;
 
 .info {
   font-size: 190%;
-  font-family: 'Gotham Bold';
   font-weight: 1000;
   font-style: normal;
 }
@@ -118,7 +119,6 @@ z-index: 500;
 
 .modal-square .info {
   font-size: 18px; /* Or any other size you prefer */
-  font-family: 'Gotham Bold';
   font-weight: 1000;
   font-style: normal;
   z-index: 99;
@@ -278,14 +278,12 @@ z-index: 500;
 
 #word {
   font-size: 14px;
-  font-family: 'Gotham Bold';
   font-weight: 500;
   font-style: normal;
 }
 
 #time, #date {
   font-size: 25px;
-  font-family: 'Gotham Bold';
   font-weight: 9000;
   font-style: normal;
 }
