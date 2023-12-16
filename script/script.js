@@ -82,9 +82,6 @@ function updateModalCurrentTime() {
   document.getElementById('modalCurrTime').textContent = currentTimeFormatted;
 }
 
-// Update the modal current time every second
 setInterval(updateModalCurrentTime, 1000);
 
-
-// Rest of your JavaScript...
 

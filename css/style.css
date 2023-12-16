@@ -60,7 +60,7 @@ position: absolute; /* Takes the image out of the document flow */
 top: 59%; /* Positions the top edge of the image in the middle of the container */
 left: 47%; /* Positions the left edge of the image in the middle of the container */
 transform: translate(-50%, -50%); /* Offsets the image by half its width and height to truly center it */
-z-index: 5;
+z-index: 500;
 }
 
 
@@ -121,6 +121,12 @@ z-index: 5;
   font-family: 'Gotham Bold';
   font-weight: 1000;
   font-style: normal;
+  z-index: 99;
+}
+
+.modal .wave-box {
+  position: relative;
+  z-index: 80;
 }
 
 
@@ -240,12 +246,15 @@ z-index: 5;
 }
 
 .wave.color-wave#wave2 {
+  background: url('../img/red-ribbon.png');
+}
+
+.wave.color-wave#wave3 {
   background: url('../img/yellow-ribbon.png');
 }
 
-/* if wavebox inside model */
-.modal .wave-box {
-  position: relative;
+.wave.color-wave#wave4 {
+  background: url('../img/yellow-ribbon.png');
 }
 
 @keyframes animateWave {
