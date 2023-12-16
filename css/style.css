@@ -110,10 +110,11 @@ z-index: 500;
   flex-direction: column; /* Stack children vertically */
   justify-content: center; /* Center children vertically */
   align-items: center; /* Center children horizontally */
-  background-color: rgb(220, 212, 212); 
+  background-color: rgb(229, 226, 229); 
   width: 100%; /* Full width of the modal content */
   height: 40%; /* Adjust the height as needed */
   border-radius: 15px;
+  position: relative;
   
 }
 
@@ -125,7 +126,7 @@ z-index: 500;
 }
 
 .modal .wave-box {
-  position: relative;
+  position: absolute;
   z-index: 80;
 }
 
