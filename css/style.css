@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 body, html {
-  height: 100%;
+  height: 105%;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -10,6 +10,19 @@ body, html {
   font-family: 'Raleway', sans-serif;
   background-color: #bc5244;
 }
+
+
+.top-header {
+  background-color: rgb(255, 255, 255); /* Or any color you want */
+  width: 100%;
+  height: 40px; /* Or any height you want */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* High z-index to keep it above other content */
+  /* Add any additional styling for your header content */
+}
+
 
 .timer {
   font-size: 48px;
@@ -92,6 +105,7 @@ z-index: 500;
   background-color: rgba(0,0,0,0.4); /* Semi-transparent black background */
   backdrop-filter: blur(5px); /* Blurs the content behind the modal */
 }
+
 
 /* Modal Content Box */
 .modal-content {
