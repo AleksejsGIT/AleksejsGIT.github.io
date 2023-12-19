@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 body, html {
-  height: 105%;
+  height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* High z-index to keep it above other content */
+  z-index: 0; /* High z-index to keep it above other content */
   /* Add any additional styling for your header content */
 }
 
