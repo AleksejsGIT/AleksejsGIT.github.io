@@ -1,3 +1,16 @@
+const FULL_DASH_ARRAY = 283; // The circumference of the circle
+let timeLeft = 60 * 10; // Your countdown in seconds
+let TIME_LIMIT = timeLeft;
+
+function setCircleDasharray() {
+  const circle = document.querySelector('.timer-circle');
+  if (circle) {
+    const fraction = timeLeft / TIME_LIMIT;
+    const dashoffset = FULL_DASH_ARRAY - (fraction * FULL_DASH_ARRAY);
+    circle.style.strokeDashoffset = dashoffset.toString();
+  }
+}
+
 function startTimer(duration, display) {
   var start = Date.now(),
       diff,
@@ -13,13 +26,21 @@ function startTimer(duration, display) {
 
     display.textContent = minutes + ":" + seconds;
 
+    // Update the pie timer
+    timeLeft = diff;
+    setCircleDasharray();
+
     if (diff <= 0) {
+      clearInterval(timerInterval);
       start = Date.now() + 1000;
     }
   }
   timer();
-  setInterval(timer, 1000);
+  var timerInterval = setInterval(timer, 1000);
 }
+
+// ... rest of your JavaScript remains unchanged
+
 
 function displayInfo() {
   let now = new Date();
@@ -84,9 +105,4 @@ function updateModalCurrentTime() {
 
 setInterval(updateModalCurrentTime, 1000);
 
-window.addEventListener("load",function() {
-  setTimeout(function(){
-      // This hides the address bar:
-      window.scrollTo(0, 1);
-  }, 0);
-});
+

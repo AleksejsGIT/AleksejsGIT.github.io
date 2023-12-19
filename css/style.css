@@ -83,6 +83,43 @@ z-index: 500;
   color: #dbcbcb;
 }
 
+.timer-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timer-circle {
+  fill: none;
+  stroke-width: 10;
+  stroke: rgb(255, 255, 255);
+  stroke-dasharray: 282.6;
+  stroke-dashoffset: 0;
+}
+
+.timer {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 1000;
+  font-style: normal;
+  position: absolute;
+  z-index: 10;
+}
+
+
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
