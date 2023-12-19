@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+
 
 body, html {
   height: 100%;
@@ -37,6 +38,8 @@ body, html {
   justify-content: top;
   padding-top: 4%;
   align-items: center; 
+  
+  
 }
 
 .squareTop {
@@ -68,11 +71,7 @@ z-index: 500;
 }
 
 
-.info {
-  font-size: 190%;
-  font-weight: 1000;
-  font-style: normal;
-}
+
 
 .textInsideShadow {
   position: absolute;
@@ -81,6 +80,7 @@ z-index: 500;
   transform: translateX(-50%);
   z-index: 10;
   color: #dbcbcb;
+  
 }
 
 .timer-container {
