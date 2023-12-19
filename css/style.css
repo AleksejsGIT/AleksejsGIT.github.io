@@ -84,12 +84,13 @@ z-index: 500;
 }
 
 .timer-container {
-  position: relative;
+  position: fixed;
   width: 200px;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 30;
 }
 
 .timer-svg {
@@ -99,14 +100,22 @@ z-index: 500;
   position: absolute;
   top: 0;
   left: 0;
+  stroke-linecap: round;
+}
+
+.timer-circle-bg {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.4); /* Black color with lowered opacity */
+  stroke-width: 8;
 }
 
 .timer-circle {
   fill: none;
-  stroke-width: 10;
+  stroke-width: 8;
   stroke: rgb(255, 255, 255);
   stroke-dasharray: 282.6;
   stroke-dashoffset: 0;
+
 }
 
 .timer {

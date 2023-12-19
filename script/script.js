@@ -4,10 +4,12 @@ let TIME_LIMIT = timeLeft;
 
 function setCircleDasharray() {
   const circle = document.querySelector('.timer-circle');
+  const circleEnds = document.querySelectorAll('.timer-circle-end');
   if (circle) {
     const fraction = timeLeft / TIME_LIMIT;
     const dashoffset = FULL_DASH_ARRAY - (fraction * FULL_DASH_ARRAY);
     circle.style.strokeDashoffset = dashoffset.toString();
+    
   }
 }
 
