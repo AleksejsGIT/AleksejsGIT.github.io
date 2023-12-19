@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
+
 
 
 body, html {
@@ -38,7 +39,7 @@ body, html {
   justify-content: top;
   padding-top: 4%;
   align-items: center; 
-  
+  font-weight: 900;
   
 }
 
@@ -80,7 +81,7 @@ z-index: 500;
   transform: translateX(-50%);
   z-index: 10;
   color: #dbcbcb;
-  
+  font-weight: 500;
 }
 
 .timer-container {
@@ -142,6 +143,8 @@ z-index: 500;
 }
 
 
+
+
 /* Modal Content Box */
 .modal-content {
   position: relative;
@@ -150,7 +153,7 @@ z-index: 500;
   padding: 20px;
   border: 1px solid #888;
   width: 75%; /* Could be more or less, depending on screen size */
-  height: 70%;
+  height: 60%;
   border-radius: 15px; /* Adjust if you want rounded corners */
 }
 
@@ -168,10 +171,15 @@ z-index: 500;
 }
 
 .modal-square .info {
-  font-size: 18px; /* Or any other size you prefer */
-  font-weight: 1000;
+  font-size: 28px; /* Or any other size you prefer */
+  font-weight: 900;
   font-style: normal;
   z-index: 99;
+}
+
+#modalWord1, #modalWord2 {
+  font-size: 16px; /* Smaller font size for IZMANTOTS and PAŠREIZĒJAIS LAIKS */
+  /* You can add additional styles if needed */
 }
 
 .modal .wave-box {
@@ -328,7 +336,7 @@ z-index: 500;
 
 #word {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 900;
   font-style: normal;
 }
 
