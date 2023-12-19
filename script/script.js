@@ -107,4 +107,14 @@ function updateModalCurrentTime() {
 
 setInterval(updateModalCurrentTime, 1000);
 
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
 
+document.getElementById('fullscreenButton').addEventListener('click', toggleFullScreen);
