@@ -65,8 +65,8 @@ height: auto; /* Maintains the aspect ratio */
 width: auto; /* Maintains the aspect ratio */
 margin: bot; /* Centers the image horizontally */
 position: absolute; /* Takes the image out of the document flow */
-top: 59%; /* Positions the top edge of the image in the middle of the container */
-left: 47%; /* Positions the left edge of the image in the middle of the container */
+top: 62%; /* Positions the top edge of the image in the middle of the container */
+left: 48%; /* Positions the left edge of the image in the middle of the container */
 transform: translate(-50%, -50%); /* Offsets the image by half its width and height to truly center it */
 z-index: 500;
 }
@@ -190,8 +190,8 @@ z-index: 500;
 
 .modal-image {
   display: block; /* Allows margin auto to be applied */
-  max-width: 40%; /* Ensures the image doesn't exceed the container's width */
-  max-height: 40%; /* Ensures the image doesn't exceed the container's height */
+  max-width: 55%; /* Ensures the image doesn't exceed the container's width */
+  max-height: 55%; /* Ensures the image doesn't exceed the container's height */
   height: auto; /* Maintains the aspect ratio */
   width: auto; /* Maintains the aspect ratio */
   margin: bot; /* Centers the image horizontally */
@@ -223,6 +223,7 @@ z-index: 500;
   width:  100%; /* Ensures the paragraph takes up the full width of its container */
   margin: 5; /* Removes any default margin */
   /* Add more styling as needed */
+  font-weight: bold;
 }
 
 
